@@ -1,0 +1,246 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #171717;
+    color: #eeeeee;
+    line-height: 1.65;
+}
+
+.title-page {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #292929, #111111);
+    border-bottom: 2px solid #b99a55;
+}
+
+.title-page h1 {
+    color: #d8bd78;
+    font-size: 48px;
+    margin: 5px;
+}
+
+.title-page p:first-child {
+    color: #d8bd78;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.start-button {
+    background: #d8bd78;
+    color: #171717;
+    padding: 9px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+nav {
+    background: #202020;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #383838;
+}
+
+nav a {
+    color: #d8bd78;
+    text-decoration: none;
+    margin: 0 13px;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 25px;
+}
+
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    color: #d8bd78;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+h3 {
+    color: #d8bd78;
+    margin-top: 0;
+}
+
+p {
+    color: #dddddd;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    counter-reset: fact;
+}
+
+.fact-card {
+    counter-increment: fact;
+    position: relative;
+    background: #222222;
+    border: 1px solid #454545;
+    border-left: 4px solid #b99a55;
+    border-radius: 6px;
+    padding: 18px 18px 18px 52px;
+}
+
+.fact-card::before {
+    content: counter(fact);
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    color: #d8bd78;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fact-card p,
+.impact-card p {
+    margin-bottom: 0;
+}
+
+.impact-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.impact-card,
+.reflection,
+.sources {
+    background: #222222;
+    border: 1px solid #454545;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.reflection {
+    border-left: 4px solid #b99a55;
+}
+
+figure {
+    text-align: center;
+    margin: 25px auto;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    border: 1px solid #555555;
+    border-radius: 6px;
+}
+
+figcaption {
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Samuel Marsden portrait */
+.portrait {
+    width: 100%;
+    max-width: 340px;
+}
+
+.portrait img {
+    width: 300px;
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+}
+
+/* Rangihoua Bay photograph */
+.section-photo {
+    width: 100%;
+    max-width: 520px;
+}
+
+.section-photo img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+}
+
+/* Sermon artwork */
+.impact-photo {
+    width: 100%;
+    max-width: 360px;
+}
+
+.impact-photo img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+}
+
+.sources a {
+    color: #d8bd78;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #454545;
+    color: #999999;
+    margin-top: 35px;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 15px;
+    }
+
+    .facts-grid,
+    .impact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .title-page h1 {
+        font-size: 36px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .portrait img {
+        width: 190px;
+    }
+
+    .section-photo {
+        max-width: 100%;
+    }
+
+    .impact-photo {
+        max-width: 320px;
+    }
+}
